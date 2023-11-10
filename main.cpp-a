@@ -1,0 +1,25 @@
+/* mbed Microcontroller Library
+ * Copyright (c) 2019 ARM Limited
+ * SPDX-License-Identifier: Apache-2.0
+ */
+
+#include "mbed.h"
+
+int main()
+{
+    DigitalOut led(PA_5);
+    DigitalIn button(PA_1);
+
+    button.mode(PullDown);
+
+    while (true) {
+        if (button) {
+            led = true;
+
+            while (button) {
+
+            }
+
+            led = false;
+        }
+    }}
